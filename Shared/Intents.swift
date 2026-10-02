@@ -26,7 +26,7 @@ struct UnlockIntent: AppIntent {
 }
 
 struct ToggleLockIntent: AppIntent {
-    static let title: LocalizedStringResource = "잠금 전환"
+    static let title: LocalizedStringResource = "Dip 전환"
     static let openAppWhenRun = false
 
     func perform() async throws -> some IntentResult {

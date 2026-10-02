@@ -3,16 +3,10 @@ import AppIntents
 struct DipShortcuts: AppShortcutsProvider {
     static var appShortcuts: [AppShortcut] {
         AppShortcut(
-            intent: LockIntent(),
-            phrases: ["\(.applicationName) 잠가", "\(.applicationName) 잠그기", "Lock \(.applicationName)"],
-            shortTitle: "잠그기",
-            systemImageName: "lock.fill"
-        )
-        AppShortcut(
-            intent: UnlockIntent(),
-            phrases: ["\(.applicationName) 풀어", "\(.applicationName) 풀기", "Unlock \(.applicationName)"],
-            shortTitle: "풀기",
-            systemImageName: "lock.open.fill"
+            intent: ToggleLockIntent(),
+            phrases: ["\(.applicationName) 전환", "\(.applicationName) 토글", "Toggle \(.applicationName)"],
+            shortTitle: "잠금 전환",
+            systemImageName: "lock.rotation"
         )
     }
 }
