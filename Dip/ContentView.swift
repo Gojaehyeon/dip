@@ -23,11 +23,10 @@ struct ContentView: View {
             .animation(.snappy, value: blocker.locked)
 
             Button { showPicker = true } label: {
-                Text("앱 선택")
-                    .font(.body.weight(.semibold))
+                Image(systemName: "ellipsis")
+                    .font(.system(size: 20, weight: .semibold))
                     .foregroundStyle(.primary)
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 12)
+                    .frame(width: 56, height: 44)
                     .overlay(Capsule().strokeBorder(Color.primary, lineWidth: 1.5))
             }
         }
